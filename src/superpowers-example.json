@@ -1,0 +1,93 @@
+{
+  "githubUrl": "https://github.com/vanBadAsselt/hackathon-leaddev-anais",
+  "userJourneys": [
+    {
+      "name": "Browse All Characters",
+      "description": "View the complete list of available superhero characters",
+      "steps": [
+        "User opens the application at http://localhost:3000/",
+        "Application loads and displays 50 characters in a table",
+        "User sees hero section showing 50 Characters and Marvel & DC Universes",
+        "User scrolls through the table viewing character names with icons",
+        "User views publisher information (Marvel Comics or DC Comics)",
+        "User views alignment badges (good/bad/neutral)",
+        "User views total power scores and action buttons"
+      ]
+    },
+    {
+      "name": "Search for a Specific Character",
+      "description": "Find a character by typing their name in the search field",
+      "steps": [
+        "User is on the homepage with all 50 characters displayed",
+        "User clicks into the Search characters textbox",
+        "User types spider into the search field",
+        "Application filters results in real-time",
+        "Character count updates to Found 1 characters",
+        "Table shows only Spider-Man"
+      ]
+    },
+    {
+      "name": "Filter Characters by Alignment",
+      "description": "View only villains (bad characters) using the alignment filter",
+      "steps": [
+        "User is on the homepage",
+        "User clicks the All Alignments dropdown",
+        "User selects Bad from the options",
+        "Application filters the table",
+        "Character count updates to Found 14 characters",
+        "Table displays only villains with red bad badges"
+      ]
+    },
+    {
+      "name": "Sort Characters by Power Level",
+      "description": "See which characters are the most powerful by sorting the list",
+      "steps": [
+        "User is on the homepage with characters displayed",
+        "User clicks the sort dropdown",
+        "User selects Power (High-Low)",
+        "Table immediately reorders by power",
+        "Thanos with 583 power appears at the top",
+        "Lower powered characters appear at the bottom"
+      ]
+    },
+    {
+      "name": "View Detailed Character Information",
+      "description": "Learn everything about Spider-Man by viewing detailed character modal",
+      "steps": [
+        "User is on the homepage",
+        "User locates Spider-Man in the character table",
+        "User clicks the Details button in Spider-Man row",
+        "Modal opens displaying comprehensive information",
+        "User views Biography (Full Name, Alignment, Publisher, Place of Birth, First Appearance)",
+        "User views Total Power: 446",
+        "User views Power Stats with visual progress bars for Intelligence, Strength, Speed, Durability, Power, Combat",
+        "User views Appearance (Gender, Race, Height, Weight)",
+        "User views Work (Occupation, Base)",
+        "User views Aliases",
+        "User clicks the close button or clicks outside the modal",
+        "Modal closes and user returns to the character list"
+      ]
+    },
+    {
+      "name": "Compare Two Characters",
+      "description": "Find out who would win: Thanos vs Joker by using the comparison feature",
+      "steps": [
+        "User is on the homepage",
+        "User filters by alignment Bad to see villains",
+        "User clicks Compare button on Joker row",
+        "Button changes to Selected",
+        "Compare Selected button updates to (1/2) and remains disabled",
+        "User clicks Compare button on Thanos row",
+        "Second button changes to Selected",
+        "Compare Selected button updates to (2/2) and becomes enabled",
+        "User clicks Compare Selected (2/2) button",
+        "Comparison modal opens displaying winner banner and stats",
+        "User views side-by-side power display",
+        "User views stat breakdown showing all 6 comparisons",
+        "User reviews the comparison analysis",
+        "User clicks close button to close modal",
+        "Modal closes and selection is cleared"
+      ]
+    }
+  ]
+}
