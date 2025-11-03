@@ -26,6 +26,13 @@ export class GitHubScanner {
       // Ensure temp directory exists
       await fs.mkdir(this.tempDir, { recursive: true });
 
+      // Remove existing repository if it exists
+      try {
+        await fs.rm(repoPath, { recursive: true, force: true });
+      } catch (cleanupError) {
+        // Ignore if directory doesn't exist
+      }
+
       // Clone the repository (shallow clone for efficiency)
       console.log(`Cloning repository: ${githubUrl}`);
       await execAsync(`git clone --depth 1 ${githubUrl} ${repoPath}`);

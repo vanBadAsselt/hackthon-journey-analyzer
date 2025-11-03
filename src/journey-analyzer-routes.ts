@@ -49,6 +49,15 @@ router.post('/analyze', async (req: Request, res: Response) => {
           message: 'Each journey must have name, description, and steps'
         });
       }
+
+      // Check if steps have non-empty values
+      const validSteps = journey.steps.filter(step => step && step.trim().length > 0);
+      if (validSteps.length === 0) {
+        return res.status(400).json({
+          error: 'Invalid user journey',
+          message: `Journey "${journey.name}" must have at least one non-empty step`
+        });
+      }
     }
 
     // Perform analysis
